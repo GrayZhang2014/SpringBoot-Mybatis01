@@ -1,5 +1,11 @@
 server:
   port: 80
+  
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml    # mybatis配置文件所在路径
+  type-aliases-package: cn.mldn.microboot.vo            # 定义所有操作类的别名所在包
+  mapper-locations:                                     # 所有的mapper映射文件
+   - classpath:mybatis/mapper/**/*.xml
 spring:
   messages:
     basename: i18n/Messages,i18n/Pages
